@@ -1,8 +1,8 @@
 #!/bin/bash 
 
-sudo pip install wheel
-sudo pip install python-openstackclient
-sudo pip install python-magnumclient
+pip install wheel
+pip install python-openstackclient
+pip install python-magnumclient
 export OS_AUTH_URL=${{ secrets.AUTH_URL }}
 export OS_PROJECT_ID=${{ secrets.PROJECT_ID }}
 export OS_PROJECT_NAME=${{ secrets.PROJECT_NAME }}
