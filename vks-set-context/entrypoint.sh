@@ -1,12 +1,12 @@
 #!/bin/bash 
 
-apt-get update
-# apt-get install software-properties-common -y
-# add-apt-repository universe
-apt-get install python-pip -y 
-pip install wheel
-pip install python-openstackclient
-pip install python-magnumclient
+# apt-get update
+# # apt-get install software-properties-common -y
+# # add-apt-repository universe
+# apt-get install python-pip -y 
+# pip install wheel
+# pip install python-openstackclient
+# pip install python-magnumclient
 # export OS_AUTH_URL=${{ secrets.AUTH_URL }}
 # export OS_PROJECT_ID=${{ secrets.PROJECT_ID }}
 # export OS_PROJECT_NAME=${{ secrets.PROJECT_NAME }}
