@@ -1,5 +1,6 @@
 #!/bin/bash 
 
+add-apt-repository universe
 apt-get install python3-pip -y 
 pip install wheel
 pip install python-openstackclient
