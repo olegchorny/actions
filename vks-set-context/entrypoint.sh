@@ -24,7 +24,7 @@ if [ -z "$OS_REGION_NAME" ]; then unset OS_REGION_NAME; fi
 # export OS_IDENTITY_API_VERSION=3
 # echo $OS_USERNAME $OS_AUTH_URL $OS_REGION_NAME
 # echo $OS_AUTH_URL
-#env
+env
 #openstack token issue
 openstack coe cluster list --debug
 # openstack coe cluster show ${{ secrets.CLUSTER_NAME }}
