@@ -25,7 +25,7 @@ export OS_IDENTITY_API_VERSION=3
 # echo $OS_USERNAME $OS_AUTH_URL $OS_REGION_NAME
 # echo $OS_AUTH_URL
 env
-openstack coe cluster list
+openstack coe cluster list --debug
 # openstack coe cluster show ${{ secrets.CLUSTER_NAME }}
 # $(openstack coe cluster config ${{ secrets.CLUSTER_NAME }}) &
 # sudo apt-get update && sudo apt-get install -y apt-transport-https
