@@ -12,7 +12,7 @@ LABEL "maintainer"="Oleg <oleg.chornyi@ventus.ag"
 RUN \
   apt-get update && \
   apt-get -y upgrade && \
-  apt-get install -y python python-pip python-dev && \
+  apt-get install -y python python-pip python-dev openssl && \
   pip install wheel && pip install python-openstackclient && pip install python-magnumclient
 
 ADD entrypoint.sh /entrypoint.sh
