@@ -22,13 +22,15 @@ unset OS_TENANT_NAME
 if [ -z "$OS_REGION_NAME" ]; then unset OS_REGION_NAME; fi
 export OS_INTERFACE=public
 export OS_IDENTITY_API_VERSION=3
+echo $OS_USERNAME
+echo $OS_AUTH_URL
 openstack coe cluster list
-openstack coe cluster show ${{ secrets.CLUSTER_NAME }}
-$(openstack coe cluster config ${{ secrets.CLUSTER_NAME }}) &
-sudo apt-get update && sudo apt-get install -y apt-transport-https
-curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
-echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
-sudo apt-get update
-sudo apt-get install -y kubectl
-export KUBECONFIG=./config
-kubectl get pods --all-namespaces
+# openstack coe cluster show ${{ secrets.CLUSTER_NAME }}
+# $(openstack coe cluster config ${{ secrets.CLUSTER_NAME }}) &
+# sudo apt-get update && sudo apt-get install -y apt-transport-https
+# curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+# echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
+# sudo apt-get update
+# sudo apt-get install -y kubectl
+# export KUBECONFIG=./config
+# kubectl get pods --all-namespaces
