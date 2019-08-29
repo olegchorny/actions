@@ -15,6 +15,7 @@ RUN \
   apt-get install -y python python-pip python-dev openssl && \
   pip install wheel && pip install python-openstackclient && pip install python-magnumclient
 
-ADD entrypoint.sh /entrypoint.sh
-ENTRYPOINT /entrypoint.sh
+# ADD entrypoint.sh /entrypoint.sh
+# ENTRYPOINT /entrypoint.sh
 # ENTRYPOINT ["openstack", "coe", "cluster", "list"]
+ENTRYPOINT openstack coe cluster list
