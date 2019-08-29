@@ -1,5 +1,6 @@
 #!/bin/bash 
 
+apt-get install software-properties-common -y
 add-apt-repository universe
 apt-get install python3-pip -y 
 pip install wheel
