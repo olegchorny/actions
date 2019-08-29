@@ -9,5 +9,11 @@ LABEL "repository"="http://github.com/ventus-ag/actions"
 LABEL "homepage"="http://github.com/ventus-ag"
 LABEL "maintainer"="Oleg <oleg.chornyi@ventus.ag"
 
+RUN \
+  apt-get update && \
+  apt-get -y upgrade && \
+  apt-get install -y python python-pip python-dev && \
+  pip install wheel && pip install python-openstackclient && pip install python-magnumclient
+
 ADD entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
