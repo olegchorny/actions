@@ -7,26 +7,25 @@
 # pip install wheel
 # pip install python-openstackclient
 # pip install python-magnumclient
-# export OS_AUTH_URL=$AUTH_URL
-# export OS_PROJECT_ID=$PROJECT_ID
-# export OS_PROJECT_NAME=$PROJECT_NAME
-# export OS_USER_DOMAIN_NAME=$USER_DOMAIN_NAME
+export OS_AUTH_URL
+export OS_PROJECT_ID
+export OS_PROJECT_NAME
+export OS_USER_DOMAIN_NAME
 if [ -z "$OS_USER_DOMAIN_NAME" ]; then unset OS_USER_DOMAIN_NAME; fi
-# export OS_PROJECT_DOMAIN_ID=$PROJECT_DOMAIN_ID
+export OS_PROJECT_DOMAIN_ID
 if [ -z "$OS_PROJECT_DOMAIN_ID" ]; then unset OS_PROJECT_DOMAIN_ID; fi
 unset OS_TENANT_ID
 unset OS_TENANT_NAME
-# export OS_USERNAME=$USERNAME
-# export OS_PASSWORD=$PASSWORD
-# export OS_REGION_NAME=$REGION_NAME
+export OS_USERNAME
+export OS_PASSWORD
+export OS_REGION_NAME
 if [ -z "$OS_REGION_NAME" ]; then unset OS_REGION_NAME; fi
-# export OS_INTERFACE=public
-# export OS_IDENTITY_API_VERSION=3
+export OS_INTERFACE
+export OS_IDENTITY_API_VERSION
 # echo $OS_USERNAME $OS_AUTH_URL $OS_REGION_NAME
 # echo $OS_AUTH_URL
-env
 #openstack token issue
-$(openstack coe cluster list)
+openstack coe cluster list
 # openstack coe cluster show ${{ secrets.CLUSTER_NAME }}
 # $(openstack coe cluster config ${{ secrets.CLUSTER_NAME }}) &
 # sudo apt-get update && sudo apt-get install -y apt-transport-https
