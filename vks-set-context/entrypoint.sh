@@ -1,12 +1,12 @@
 #!/bin/bash 
 
 openstack coe cluster list \ 
---os-auth-url $OS_AUTH_URL \ 
---os-identity-api-version 3 \
---os-project-name $OS_PROJECT_NAME \
---os-project-domain-name $OS_USER_DOMAIN_NAME \
---os-username $OS_USERNAME \
---os-user-domain-name $OS_USER_DOMAIN_NAME
+  --os-auth-url $OS_AUTH_URL \ 
+  --os-identity-api-version 3 \
+  --os-project-name $OS_PROJECT_NAME \
+  --os-project-domain-name $OS_USER_DOMAIN_NAME \
+  --os-username $OS_USERNAME \
+  --os-user-domain-name $OS_USER_DOMAIN_NAME
 
 # apt-get update
 # # apt-get install software-properties-common -y
