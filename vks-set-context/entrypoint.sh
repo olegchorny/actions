@@ -22,7 +22,7 @@ export OS_REGION_NAME=$REGION_NAME
 if [ -z "$OS_REGION_NAME" ]; then unset OS_REGION_NAME; fi
 export OS_INTERFACE=public
 export OS_IDENTITY_API_VERSION=3
-# echo $OS_USERNAME
+echo $OS_USERNAME $OS_AUTH_URL $OS_REGION_NAME
 # echo $OS_AUTH_URL
 openstack coe cluster list
 # openstack coe cluster show ${{ secrets.CLUSTER_NAME }}
